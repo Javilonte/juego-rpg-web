@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego RPG Steampunk</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Referencia a una fuente steampunk -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal del juego -->
+    <div id="juego">
+        <!-- Selector de personaje -->
+        <div id="seleccionar-personaje">
+            <h2>Elige tu personaje:</h2>
+            <div class="personajes-seleccion">
+                <div class="personaje-opcion" onclick="seleccionarPersonaje('1')">
+                    <!-- Contenedor para el personaje creado con CSS -->
+                    <div class="personaje-css ingeniero"></div>
+                    <p>Ingeniero Mecánico</p>
+                </div>
+                <div class="personaje-opcion" onclick="seleccionarPersonaje('2')">
+                    <div class="personaje-css alquimista"></div>
+                    <p>Alquimista</p>
+                </div>
+                <div class="personaje-opcion" onclick="seleccionarPersonaje('3')">
+                    <div class="personaje-css piloto"></div>
+                    <p>Piloto de Dirigibles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interfaz del sistema de batalla -->
+        <div id="interfaz-batalla">
+            <!-- Información del jugador y oponente -->
+            <div id="info-personajes">
+                <div class="personaje-info">
+                    <h3 id="nombre-jugador">Nombre del Jugador</h3>
+                    <div class="barra-salud-container">
+                        <div id="salud-jugador" class="barra-salud"></div>
+                    </div>
+                </div>
+                <div class="personaje-info">
+                    <h3 id="nombre-oponente">Nombre del Oponente</h3>
+                    <div class="barra-salud-container">
+                        <div id="salud-oponente" class="barra-salud"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Área para mostrar los personajes durante la batalla -->
+            <div id="area-batalla">
+                <!-- Personaje del jugador -->
+                <div id="personaje-jugador" class="personaje-css">
+                    <!-- El personaje se mostrará aquí con CSS -->
+                </div>
+                <!-- Personaje oponente -->
+                <div id="personaje-oponente" class="personaje-css enemigo">
+                    <!-- El enemigo se mostrará aquí con CSS -->
+                </div>
+            </div>
+
+            <!-- Opciones de acción -->
+            <div id="opciones-accion">
+                <button id="boton-atacar">Atacar</button>
+                <button id="boton-habilidad">Habilidad Especial</button>
+                <button id="boton-huir">Huir</button>
+            </div>
+
+            <!-- Registro de mensajes -->
+            <div id="registro-mensajes"></div>
+        </div>
+    </div>
+
+    <!-- Incluye el script de JavaScript al final del body -->
+    <script src="game.js"></script>
+</body>
+</html>
